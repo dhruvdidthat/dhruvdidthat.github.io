@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dhruv Kumar</title>
+<link rel="stylesheet" href="css/contact_style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&family=JetBrains+Mono:wght@300;400;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/dk logo/logo yellow.png" class="logo-gold" alt="DK">
+    <img src="assets/dk logo/logo white.png" class="logo-white" alt="DK">
+  </a>
+  <div class="nav-center">
+    <a href="ai.html" class="nav-main nav-green">AI ENGINEER</a>
+    <span class="nav-x">×</span>
+    <a href="film.html" class="nav-main nav-red">FILMMAKER</a>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="contact.html" class="nav-active">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="hero-bg">
+    <!-- Split background: red left, green right, gold center -->
+    <div class="hero-half left-half"></div>
+    <div class="hero-half right-half"></div>
+    <div class="hero-center-line"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// LET'S TALK</p>
+    <h1 class="hero-title">
+      REACH<br>
+      <em>OUT</em>
+    </h1>
+    <p class="hero-sub">Whether it's a film project, an AI collaboration, or just a conversation — I'm all ears.</p>
+  </div>
+</section>
+
+<!-- MAIN LAYOUT -->
+<main class="contact-main">
+
+  <!-- LEFT: Info panel -->
+  <aside class="contact-info" data-reveal>
+
+    <div class="info-block">
+      <div class="info-label">// DIRECT MAIL</div>
+      <a href="mailto:pvt.dhruvkumar@gmail.com" class="info-email">
+        PVT.DHRUVKUMAR<br>@GMAIL.COM
+      </a>
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-block">
+      <div class="info-label">// I CAN HELP WITH</div>
+      <ul class="help-list">
+        <li><span class="help-dot green-dot">●</span> AI / ML Engineering</li>
+        <li><span class="help-dot green-dot">●</span> Research Collaboration</li>
+        <li><span class="help-dot green-dot">●</span> Multi-Agent Systems</li>
+        <li><span class="help-dot red-dot">●</span> Film Direction & Editing</li>
+        <li><span class="help-dot red-dot">●</span> Cinematography</li>
+        <li><span class="help-dot red-dot">●</span> Photography</li>
+      </ul>
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-block">
+      <div class="info-label">// FIND ME AT</div>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/dhruv-needs-raise/"><i class="fab fa-linkedin"></i><span>dhruv-needs-raise</span></a>
+        <a href="https://github.com/SnookyDru"><i class="fab fa-github"></i><span>SnookyDru</span></a>
+        <a href="https://www.instagram.com/notdhruv.exe/"><i class="fab fa-instagram"></i><span>notdhruv.exe</span></a>
+        <a href="https://medium.com/@pvt.dhruvkumar"><i class="fab fa-medium"></i><span>pvt.dhruvkumar</span></a>
+        <a href="https://x.com/SnookyDru"><i class="fab fa-twitter"></i><span>SnookyDru</span></a>
+        <a href="https://www.youtube.com/@snookydru2589"><i class="fab fa-youtube"></i><span>snookydru2589</span></a>
+      </div>
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-block">
+      <div class="info-label">// BASED IN</div>
+      <p class="info-location"><i class="fas fa-map-marker-alt"></i> IIT Kharagpur, West Bengal, India</p>
+    </div>
+
+  </aside>
+
+  <!-- RIGHT: Form -->
+  <section class="contact-form-wrap" data-reveal>
+
+    <div class="form-header">
+      <p class="form-eyebrow">// SEND A MESSAGE</p>
+      <p class="form-note">I typically respond within 24 hours.</p>
+    </div>
+
+    <!--
+      SETUP INSTRUCTIONS:
+      1. Go to https://formspree.io and create a free account
+      2. Create a new form → copy your Form ID (e.g. "xpwzayqb")
+      3. Replace YOUR_FORM_ID below with your actual ID
+      4. That's it — submissions will be emailed to your Formspree-linked address
+    -->
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/xwvrpajd"
+      method="POST"
+      class="contact-form"
+      novalidate
+    >
+
+      <div class="form-row two-col">
+        <div class="field-group">
+          <label for="name">Name <span class="req">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+          >
+        </div>
+        <div class="field-group">
+          <label for="email">Email <span class="req">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="subject">Subject <span class="req">*</span></label>
+        <div class="select-wrap">
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected hidden>What's this about?</option>
+            <optgroup label="AI & Engineering">
+              <option value="AI / ML Solution to your problem">AI / ML Solution to your problem</option>
+              <option value="Research Collaboration">Research Collaboration</option>
+              <option value="Job / Opportunity">Job / Opportunity</option>
+            </optgroup>
+            <optgroup label="Filmmaking">
+              <option value="Film Direction">Film Direction</option>
+              <option value="Cinematography">Cinematography</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Photography">Photography</option>
+            </optgroup>
+            <option value="Other">Other</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="message">Message <span class="req">*</span></label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Tell me about your project, idea, or just say hi..."
+          required
+        ></textarea>
+        <span class="char-count" id="charCount">0 / 1000</span>
+      </div>
+
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="New message from portfolio">
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-icon">→</span>
+        <span class="btn-loading" style="display:none"><i class="fas fa-circle-notch fa-spin"></i></span>
+      </button>
+
+    </form>
+
+    <!-- Success State -->
+    <div class="form-success" id="formSuccess" style="display:none">
+      <div class="success-icon">✓</div>
+      <h3>Message Sent!</h3>
+      <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+      <button onclick="resetForm()" class="reset-btn">Send Another</button>
+    </div>
+
+    <!-- Error State -->
+    <div class="form-error-msg" id="formError" style="display:none">
+      <i class="fas fa-exclamation-triangle"></i>
+      Something went wrong. Please try emailing me directly at
+      <a href="mailto:pvt.dhruvkumar@gmail.com">pvt.dhruvkumar@gmail.com</a>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="contact-footer" data-reveal>
+  <div class="footer-inner">
+    <div class="footer-split">
+      <a href="" class="footer-world red-world">
+      </a>
+      <div class="footer-center">
+        <span class="footer-mark">DK · 2026</span>
+      </div>
+      <a href="" class="footer-world green-world">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cursor.js"></script>
+<script src="js/contact_script.js"></script>
+</body>
+</html>

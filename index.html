@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhruv Kumar — AI Engineer & Filmmaker</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;600&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-text">DK</span>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+<div class="grain"></div>
+
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="logo">
+    <img src="assets/dk logo/logo yellow.png" class="logo-green" alt="DK">
+    <img src="assets/dk logo/logo white.png" class="logo-white" alt="DK">
+  </a>
+  <div class="nav-center">
+    <a href="ai.html" class="nav-main nav-ai">AI ENGINEER</a>
+    <span class="nav-x">×</span>
+    <a href="film.html" class="nav-main nav-film">FILMMAKER</a>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="contact.html" class="nav-contact-pill">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <video autoplay muted loop playsinline>
+    <source src="assets/video/intro.mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<section class="worked" data-reveal>
+  <h3 class="section-label">WORKED WITH</h3>
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <img src="assets/logos/isro.png" alt="ISRO">
+      <img src="assets/logos/kroslo.png" alt="Kroslo">
+      <img src="assets/logos/iit.png" alt="IIT">
+      <img src="assets/logos/fmk.png" alt="FMK">
+      <img src="assets/logos/prodigal.png" alt="Prodigal">
+      <img src="assets/logos/myntra.png" alt="Myntra">
+      <img src="assets/logos/tfps.png" alt="TFPS">
+      <img src="assets/logos/isro.png" alt="ISRO">
+      <img src="assets/logos/kroslo.png" alt="Kroslo">
+      <img src="assets/logos/iit.png" alt="IIT">
+      <img src="assets/logos/fmk.png" alt="FMK">
+      <img src="assets/logos/prodigal.png" alt="Prodigal">
+      <img src="assets/logos/myntra.png" alt="Myntra">
+      <img src="assets/logos/tfps.png" alt="TFPS">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="profile" data-reveal>
+    <div class="profile-frame">
+      <img src="assets/img/profile.png" alt="Dhruv Kumar">
+    </div>
+  </div>
+  <div class="bio" data-reveal>
+    <div class="bio-label">// ABOUT ME</div>
+    <h1 class="bio-name">HI, I'M<br><span class="name-accent">DHRUV KUMAR</span></h1>
+    <p>An <span class="green">AI Engineer</span> and a <span class="green">Freelance Filmmaker</span> who loves building intelligent systems and telling stories through visuals.</p>
+    <p>Currently working <span class="green">@SRIC, IIT Kharagpur</span> and building projects in Artificial Intelligence, Machine Learning and creative media.</p>
+    <div class="links-container">
+      <div class="links-grid links-ai">
+        <a href="ai.html#projects" data-label="01">PROJECTS</a>
+        <a href="ai.html#blogs" data-label="02">BLOGS</a>
+        <a href="ai.html#publications" data-label="03">RESEARCH WORK</a>
+      </div>
+      <div class="links-grid links-film">
+        <a href="film.html#short-films" data-label="04">SHORT FILMS</a>
+        <a href="film.html#music-videos" data-label="05">MUSIC VIDEOS</a>
+        <a href="film.html#photography" data-label="06">PHOTOGRAPHY</a>
+      </div>
+    </div>
+    <div class="contact-row" id="contact">
+      <div class="email">
+        <span class="email-label">// MAIL</span>
+        <a href="mailto:pvt.dhruvkumar@gmail.com">PVT.DHRUVKUMAR@GMAIL.COM</a>
+      </div>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/dhruv-needs-raise/"><i class="fab fa-linkedin"></i><span>//dhruv-needs-raise</span></a>
+      <a href="https://github.com/SnookyDru"><i class="fab fa-github"></i><span>//SnookyDru</span></a>
+      <a href="https://www.instagram.com/notdhruv.exe/"><i class="fab fa-instagram"></i><span>//notdhruv.exe</span></a>
+      <a href="https://www.youtube.com/@snookydru2589"><i class="fab fa-youtube"></i><span>//snookydru2589</span></a>
+      <a href="https://medium.com/@pvt.dhruvkumar"><i class="fab fa-medium"></i><span>//@pvt.dhruvkumar</span></a>
+      <a href="https://x.com/SnookyDru"><i class="fab fa-twitter"></i><span>//SnookyDru</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="choice left" onclick="location.href='ai.html'">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/video/ai.mp4"></video>
+    <div class="choice-gradient left-grad"></div>
+    <img src="assets/laptop.png" class="floating laptop" alt="">
+    <div class="content">
+      <p class="portfolio-eyebrow">// PORTFOLIO 01</p>
+      <div class="portfolio-title">AI ENGINEER</div>
+      <div class="portfolio-tags">
+        <span>AI/ML</span>
+        <span>NLP</span>
+        <span>Computer Vision</span>
+        <span>Research</span>
+      </div>
+      <div class="choice-arrow">→</div>
+    </div>
+  </div>
+  <div class="split-label">×</div>
+  <div class="choice right" onclick="location.href='film.html'">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/video/film.mp4"></video>
+    <div class="choice-gradient right-grad"></div>
+    <img src="assets/camera.png" class="floating camera" alt="">
+    <div class="content">
+      <p class="portfolio-eyebrow">// PORTFOLIO 02</p>
+      <div class="portfolio-title">FILMMAKER</div>
+      <div class="portfolio-tags">
+        <span>Direction</span>
+        <span>Cinematography</span>
+        <span>Photography</span>
+      </div>
+      <div class="choice-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-reveal>
+  <div class="footer-inner">
+    <div class="footer-eyebrow">// LET'S CREATE SOMETHING</div>
+    <h2 class="reach-text">
+      Wanna work with me?
+      <a href="contact.html" class="reach">//Reach out.</a>
+    </h2>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <span class="peace">&copy; Dhruv Kumar 2026</span>
+      <span class="footer-sub">Made with code &amp; caffeine</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cursor.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
