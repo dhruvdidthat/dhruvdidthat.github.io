@@ -1,2 +1,2 @@
-# SnookyDru.github.io
+# https://dhruvdidthat.github.io/
 My website
