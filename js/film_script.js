@@ -101,3 +101,18 @@ alsoTiles.forEach(tile => {
   tile.style.transition = 'opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1)';
   tileObserver.observe(tile);
 });
+
+/* =============================================
+   PHOTOGRAPHY MARQUEE LOOP
+   ============================================= */
+
+const photoTrack = document.getElementById('photoTrack');
+
+if (photoTrack) {
+  const cards = Array.from(photoTrack.children);
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    photoTrack.appendChild(clone);
+  });
+}

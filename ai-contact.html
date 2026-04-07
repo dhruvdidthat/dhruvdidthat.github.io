@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact AI Engineer - Dhruv Kumar</title>
+<link rel="stylesheet" href="css/contact_style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&family=JetBrains+Mono:wght@300;400;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  :root {
+    --gold: #39ff14;
+    --gold-dim: rgba(57,255,20,0.12);
+    --gold-glow: 0 0 20px rgba(57,255,20,0.35);
+  }
+  .left-half { display: none; }
+  .right-half {
+    flex: 1;
+    opacity: .08;
+    background: radial-gradient(ellipse at center, var(--green) 0%, transparent 72%);
+  }
+  .hero-center-line { display: none; }
+  .nav-links a:hover,
+  .nav-links a.nav-active,
+  .contact-socials a:hover { color: var(--green); }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+<div class="grain"></div>
+
+<nav class="navbar" id="navbar">
+  <a href="ai.html" class="logo">
+    <img src="assets/dk logo/logo neon.png" class="logo-gold" alt="DK">
+    <img src="assets/dk logo/logo white.png" class="logo-white" alt="DK">
+  </a>
+  <div class="nav-links">
+    <a href="ai.html">Home</a>
+    <a href="ai-contact.html" class="nav-active">Contact</a>
+  </div>
+</nav>
+
+<section class="contact-hero">
+  <div class="hero-bg">
+    <div class="hero-half left-half"></div>
+    <div class="hero-half right-half"></div>
+    <div class="hero-center-line"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// AI COLLABORATION</p>
+    <h1 class="hero-title">
+      BUILD<br>
+      <em>WITH AI</em>
+    </h1>
+    <p class="hero-sub">Let us collaborate on AI systems, machine learning products, and applied research work.</p>
+  </div>
+</section>
+
+<main class="contact-main">
+  <aside class="contact-info" data-reveal>
+    <div class="info-block">
+      <div class="info-label">// DIRECT MAIL</div>
+      <a href="mailto:pvt.dhruvkumar@gmail.com" class="info-email">
+        PVT.DHRUVKUMAR<br>@GMAIL.COM
+      </a>
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-block">
+      <div class="info-label">// AI SERVICES</div>
+      <ul class="help-list">
+        <li><span class="help-dot green-dot">●</span> AI / ML Engineering</li>
+        <li><span class="help-dot green-dot">●</span> LLM and Agent Workflows</li>
+        <li><span class="help-dot green-dot">●</span> NLP and Computer Vision</li>
+        <li><span class="help-dot green-dot">●</span> Research Collaboration</li>
+        <li><span class="help-dot green-dot">●</span> Model Prototyping and Deployment</li>
+      </ul>
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-block">
+      <div class="info-label">// FIND ME AT</div>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/dhruv-needs-raise/"><i class="fab fa-linkedin"></i><span>dhruv-needs-raise</span></a>
+        <a href="https://github.com/SnookyDru"><i class="fab fa-github"></i><span>SnookyDru</span></a>
+        <a href="https://medium.com/@pvt.dhruvkumar"><i class="fab fa-medium"></i><span>pvt.dhruvkumar</span></a>
+        <a href="https://x.com/SnookyDru"><i class="fab fa-twitter"></i><span>SnookyDru</span></a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="contact-form-wrap" data-reveal>
+    <div class="form-header">
+      <p class="form-eyebrow">// SEND AN AI BRIEF</p>
+      <p class="form-note">Share your use case and I will respond within 24 hours.</p>
+    </div>
+
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/xwvrpajd"
+      method="POST"
+      class="contact-form"
+      novalidate
+    >
+      <div class="form-row two-col">
+        <div class="field-group">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+        <div class="field-group">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="subject">Subject <span class="req">*</span></label>
+        <div class="select-wrap">
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected hidden>What do you need help with?</option>
+            <option value="AI / ML Solution to your problem">AI / ML Solution to your problem</option>
+            <option value="Research Collaboration">Research Collaboration</option>
+            <option value="LLM / Multi-Agent System">LLM / Multi-Agent System</option>
+            <option value="Consulting / Freelance AI Work">Consulting / Freelance AI Work</option>
+            <option value="Job / Opportunity">Job / Opportunity</option>
+            <option value="Other">Other</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="message">Message <span class="req">*</span></label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your AI problem, product, or research idea..." required></textarea>
+        <span class="char-count" id="charCount">0 / 1000</span>
+      </div>
+
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="New AI inquiry from portfolio">
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-icon">→</span>
+        <span class="btn-loading" style="display:none"><i class="fas fa-circle-notch fa-spin"></i></span>
+      </button>
+    </form>
+
+    <div class="form-success" id="formSuccess" style="display:none">
+      <div class="success-icon">✓</div>
+      <h3>Message Sent!</h3>
+      <p>Thanks for sharing your AI brief. I will get back to you soon.</p>
+      <button onclick="resetForm()" class="reset-btn">Send Another</button>
+    </div>
+
+    <div class="form-error-msg" id="formError" style="display:none">
+      <i class="fas fa-exclamation-triangle"></i>
+      Something went wrong. Please email me directly at
+      <a href="mailto:pvt.dhruvkumar@gmail.com">pvt.dhruvkumar@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contact-footer" data-reveal>
+  <div class="footer-inner">
+    <div class="footer-split">
+      <a href="" class="footer-world red-world"></a>
+      <div class="footer-center">
+        <span class="footer-mark">DK · 2026</span>
+      </div>
+      <a href="" class="footer-world green-world"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cursor.js"></script>
+<script src="js/contact_script.js"></script>
+</body>
+</html>

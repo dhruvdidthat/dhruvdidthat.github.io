@@ -672,6 +672,40 @@ body {
 .portfolio-grid.three { grid-template-columns: repeat(3, 1fr); }
 .portfolio-grid.four  { grid-template-columns: repeat(4, 1fr); }
 
+/* Photography horizontal carousel */
+.photo-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.photo-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: photoMarquee 36s linear infinite;
+  will-change: transform;
+}
+
+.photo-carousel:hover .photo-track {
+  animation-play-state: paused;
+}
+
+.photo-track .iframe-wrap {
+  width: 320px;
+  flex: 0 0 320px;
+}
+
+.photo-track .iframe-wrap iframe {
+  min-height: 275px;
+}
+
+@keyframes photoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 10px)); }
+}
+
 /* =============================================
    YOU CAN ALSO
    ============================================= */
@@ -812,6 +846,82 @@ body {
 }
 
 /* =============================================
+   GEAR & SOFTWARE
+   ============================================= */
+
+.gear-section {
+  padding: 80px 80px 90px;
+  background: var(--bg);
+  position: relative;
+}
+
+.gear-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-red), transparent);
+}
+
+.gear-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gear-card {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+  padding: 28px 24px;
+  transition: border-color .3s ease, box-shadow .3s ease, transform .35s var(--ease-out);
+}
+
+.gear-card:hover {
+  border-color: var(--border-red);
+  box-shadow: 0 0 26px rgba(232,0,61,0.1);
+  transform: translateY(-2px);
+}
+
+.gear-label {
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+
+.gear-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gear-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  border-bottom: 1px dashed rgba(255,255,255,0.08);
+  padding-bottom: 8px;
+}
+
+.gear-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.gear-list i {
+  color: var(--red);
+  width: 16px;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 
@@ -896,6 +1006,7 @@ body {
   }
   .portfolio-section { padding: 60px 40px 40px; }
   .also-section { padding: 60px 40px 80px; }
+  .gear-section { padding: 60px 40px 80px; }
 }
 
 @media (max-width: 900px) {
@@ -916,13 +1027,20 @@ body {
   .showreel-overlay { left: 5%; }
 
   .portfolio-section,
-  .also-section { padding: 50px 24px; }
+  .also-section,
+  .gear-section { padding: 50px 24px; }
 
   .portfolio-grid.two,
   .portfolio-grid.three,
   .portfolio-grid.four { grid-template-columns: 1fr; }
 
+  .photo-track .iframe-wrap {
+    width: 280px;
+    flex-basis: 280px;
+  }
+
   .also-grid { grid-template-columns: 1fr; }
+  .gear-grid { grid-template-columns: 1fr; }
 
   .also-tile,
   .also-tile:nth-child(2),
@@ -945,7 +1063,8 @@ body {
   .showreel-overlay h1 { font-size: 3.5rem; }
   .nav-links a[href="#short-films"],
   .nav-links a[href="#music-videos"],
-  .nav-links a[href="#photography"] { display: none; }
+  .nav-links a[href="#photography"],
+  .nav-links a[href="#gear-software"] { display: none; }
 }
 
 /* Contact pill in film navbar */
