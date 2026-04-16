@@ -66,9 +66,64 @@ revealEls.forEach(el => observer.observe(el));
    HERO — parallax on scroll
    ============================================= */
 
-const heroVideo = document.querySelector('.hero video');
+const heroVideo = document.getElementById('heroVideo');
+const heroAudioToggle = document.getElementById('heroAudioToggle');
 
 if (heroVideo) {
+  heroVideo.loop = true;
+  heroVideo.muted = false;
+  heroVideo.volume = 1;
+
+  const updateHeroAudioButton = () => {
+    if (!heroAudioToggle) return;
+
+    const icon = heroAudioToggle.querySelector('i');
+    const label = heroAudioToggle.querySelector('span');
+    const isMuted = heroVideo.muted;
+
+    heroAudioToggle.setAttribute('aria-pressed', String(isMuted));
+    heroAudioToggle.setAttribute('aria-label', isMuted ? 'Unmute video audio' : 'Mute video audio');
+
+    if (icon) {
+      icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    }
+
+    if (label) {
+      label.textContent = isMuted ? 'Unmute Audio' : 'Mute Audio';
+    }
+  };
+
+  const tryAutoplayWithAudio = async () => {
+    try {
+      await heroVideo.play();
+    } catch (error) {
+      heroVideo.muted = true;
+      updateHeroAudioButton();
+
+      try {
+        await heroVideo.play();
+      } catch (mutedError) {
+        // Leave the native browser fallback behavior if autoplay is fully blocked.
+      }
+    }
+  };
+
+  updateHeroAudioButton();
+  tryAutoplayWithAudio();
+
+  if (heroAudioToggle) {
+    heroAudioToggle.addEventListener('click', async () => {
+      heroVideo.muted = !heroVideo.muted;
+      updateHeroAudioButton();
+
+      try {
+        await heroVideo.play();
+      } catch (error) {
+        // Ignore play rejection and keep the button state in sync.
+      }
+    });
+  }
+
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (y < window.innerHeight) {

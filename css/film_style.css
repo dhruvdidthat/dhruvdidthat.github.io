@@ -225,6 +225,38 @@ body {
 .letterbox.top { top: 0; }
 .letterbox.bottom { bottom: 0; }
 
+.hero-audio-toggle {
+  position: absolute;
+  top: 12%;
+  right: 7%;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(232,0,61,0.35);
+  background: rgba(5,5,5,0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  cursor: none;
+  transition: border-color .25s, color .25s, background .25s, box-shadow .25s;
+}
+
+.hero-audio-toggle:hover {
+  color: var(--red);
+  border-color: rgba(232,0,61,0.65);
+  background: rgba(232,0,61,0.08);
+  box-shadow: 0 0 18px rgba(232,0,61,0.14);
+}
+
+.hero-audio-toggle i {
+  font-size: 0.8rem;
+}
+
 .showreel-overlay {
   position: absolute;
   bottom: 10%;
@@ -1025,6 +1057,11 @@ body {
 
   .hero { aspect-ratio: 4/3; }
   .showreel-overlay { left: 5%; }
+  .hero-audio-toggle {
+    top: auto;
+    right: 24px;
+    bottom: 14%;
+  }
 
   .portfolio-section,
   .also-section,
@@ -1061,6 +1098,12 @@ body {
 @media (max-width: 600px) {
   .hero-roles { gap: 6px; font-size: .6rem; }
   .showreel-overlay h1 { font-size: 3.5rem; }
+  .hero-audio-toggle {
+    right: 16px;
+    bottom: 12%;
+    padding: 8px 12px;
+    font-size: 0.62rem;
+  }
   .nav-links a[href="#short-films"],
   .nav-links a[href="#music-videos"],
   .nav-links a[href="#photography"],

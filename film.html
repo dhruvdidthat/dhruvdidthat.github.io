@@ -42,13 +42,17 @@
 
 <!-- HERO -->
 <section class="hero">
-  <video autoplay muted loop playsinline>
+  <video id="heroVideo" autoplay loop playsinline>
     <source src="assets/showreel.mp4">
   </video>
 
   <div class="hero-vignette"></div>
   <div class="letterbox top"></div>
   <div class="letterbox bottom"></div>
+  <button class="hero-audio-toggle" id="heroAudioToggle" type="button" aria-pressed="false" aria-label="Mute video audio">
+    <i class="fas fa-volume-up"></i>
+    <span>Mute Audio</span>
+  </button>
 
   <div class="showreel-overlay">
     <div class="hero-tag">// FILMMAKER PORTFOLIO</div>
